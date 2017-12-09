@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="personal.myapplication.FilterActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        ></android.support.v7.widget.Toolbar>
+
+    <CheckBox
+        android:id="@+id/chk_pop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Popularity"
+        android:paddingBottom="10dp"
+        android:checkMark="@drawable/ic_check_box_black_24dp"
+        android:paddingTop="10dp"/>
+
+    <CheckBox
+        android:id="@+id/chk_performance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Performance"
+        android:paddingBottom="10dp"
+        android:checkMark="@drawable/ic_check_box_black_24dp"
+        android:paddingTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cost"
+            android:layout_marginRight="30dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 Rs"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10000 Rs"/>
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seek_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:min="0"
+                android:max="10000"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Warranty"/>
+    <RadioGroup
+        android:id="@+id/rg_warranty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6 months"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 year"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 years"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating"/>
+    <RatingBar
+        android:id="@+id/rate_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="3.5"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+
+        style="?android:attr/ratingBarStyleSmall"/>
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_gravity="right"/>
+
+</LinearLayout>
